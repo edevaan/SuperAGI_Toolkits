@@ -1,0 +1,24 @@
+classDiagram
+    class Main {
+        +main() void
+    }
+    class SuperAGIToolkit {
+        -agents SuperAGIAgents
+        -ui SuperAGIUI
+        +analyze_stock_data(data: DataFrame) DataFrame
+        +generate_insights(data: DataFrame) dict
+    }
+    class SuperAGIAgents {
+        +get_agent(agent_id: str) object
+    }
+    class SuperAGIUI {
+        +render_dashboard(data: dict) void
+    }
+    class DataFrame {
+        +read_csv(file_path: str) DataFrame
+        +to_csv(file_path: str) void
+    }
+    Main --> SuperAGIToolkit
+    SuperAGIToolkit --> SuperAGIAgents
+    SuperAGIToolkit --> SuperAGIUI
+    SuperAGIToolkit --> DataFrame

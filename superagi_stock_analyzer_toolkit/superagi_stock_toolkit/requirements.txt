@@ -1,0 +1,6 @@
+## requirements.txt
+pandas
+matplotlib
+plotly
+scikit-learn
+superagi
